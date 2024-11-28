@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 
-project_name = "mlProject"
+project_name = "network"
 
 
 list_of_files = [
@@ -20,10 +20,10 @@ list_of_files = [
     f"src/{project_name}/entity/__init__.py",
     f"src/{project_name}/entity/config_entity.py",
     f"src/{project_name}/constants/__init__.py",
-    f"src/{project_name}/logging/__init__.py",
-    f"src/{project_name}/exception/__init__.py",
+    f"src/{project_name}/logging/__init__.py", # for logging any information
+    f"src/{project_name}/exception/__init__.py", # For exception handling
     f"src/{project_name}/cloud/__init__.py",
-    ".env",
+    ".env", # This file contains the crutial and confidential system variables
     "config/config.yaml",
     "params.yaml",
     "schema.yaml",

@@ -1,0 +1,4 @@
+1) Create environment using conda create -p venv python==3.12
+2) Create project structure 
+3) Setup GitHub repo 
+4) 
