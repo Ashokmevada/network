@@ -14,5 +14,11 @@ Flask
 Flask-Cors
 seaborn
 python-dotenv # It is used to call enviorment variables
--e .
+pymongo[srv]==3.12.0
+pymongo
+python-dotenv
+certifi # It is used to call certifi which ensures that te connection is secure and from the trusted party
+dvc # Data Version Control
+dvc[all]
+# -e .
 
