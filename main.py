@@ -1,9 +1,10 @@
 from src.network.components.data_ingestion import DataIngestion
 from src.network.components.data_validation import DataValidation
 from src.network.components.data_transformation import DataTransformation
+from src.network.components.model_training import ModelTrainer
 
 
-from src.network.entity.config_entity import DataIngestionConfig , TrainingPipelineConfig, DataValidationConfig , DataTransformationConfig
+from src.network.entity.config_entity import DataIngestionConfig , TrainingPipelineConfig, DataValidationConfig , DataTransformationConfig, ModelTrainerConfig
 from src.network.logging.logger import logging
 from src.network.exception.exception import NetworkSecurityException
 import sys
@@ -33,6 +34,13 @@ if __name__ == "__main__":
         data_transformation_artifact = data_transformation.initiate_data_transformation()
         print(data_transformation_artifact)
         logging.info("Completed Data Transformation")
+        
+        logging.info("Model Training sstared")
+        model_trainer_config=ModelTrainerConfig(training_pipeline_config)
+        model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,data_transformation_artifact=data_transformation_artifact)
+        model_trainer_artifact=model_trainer.initiate_model_trainer()
+
+        logging.info("Model Training artifact created")
 
                                                  
       
