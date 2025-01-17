@@ -18,7 +18,7 @@ if __name__ == "__main__":
         training_pipeline_config = TrainingPipelineConfig()
         data_ingestion_config = DataIngestionConfig(training_pipeline_config)
         data_ingestion = DataIngestion(data_ingestion_config)    
-        logging.info("Initiated Data Ingestion Completed")
+        logging.info("Initiated Data Ingestion")
         data_ingestion_artifacts =data_ingestion.initiate_data_ingestion()
         logging.info("Completed Data Ingestion")
         print(data_ingestion_artifacts)
@@ -35,7 +35,7 @@ if __name__ == "__main__":
         print(data_transformation_artifact)
         logging.info("Completed Data Transformation")
         
-        logging.info("Model Training sstared")
+        logging.info("Model Training started...")
         model_trainer_config=ModelTrainerConfig(training_pipeline_config)
         model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,data_transformation_artifact=data_transformation_artifact)
         model_trainer_artifact=model_trainer.initiate_model_trainer()

@@ -20,5 +20,9 @@ python-dotenv
 certifi # It is used to call certifi which ensures that te connection is secure and from the trusted party
 dvc # Data Version Control
 dvc[all]
+dagshub
+fastapi
+uvicorn
+python-multipart
 # -e .
 
