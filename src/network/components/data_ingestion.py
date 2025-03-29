@@ -1,8 +1,6 @@
 from src.network.exception import exception
 from src.network.logging.logger import logging
-
 ## Data Ingestion Configs
-
 from src.network.entity.config_entity import DataIngestionConfig
 from src.network.entity.artifact_entity import DataIngestionArtifact
 
@@ -89,6 +87,7 @@ class DataIngestion:
             logging.info(f"Exported train and test file path.")
         
         except Exception as e:
+            
             raise exception.NetworkSecurityException(e, sys)
         
     def initiate_data_ingestion(self):

@@ -10,7 +10,7 @@ class TrainingPipelineConfig:
         self.artifact_dir = os.path.join(self.artifact_name, timestamp)
         self.model_dir=os.path.join("final_model")
         self.timestamp: str = timestamp
-
+        
 class DataIngestionConfig:
     def __init__(self, training_pipeline_config: TrainingPipelineConfig):
 
@@ -73,4 +73,3 @@ class ModelTrainerConfig:
         )
         self.expected_accuracy: float = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE
         self.overfitting_underfitting_threshold = training_pipeline.MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD
-
